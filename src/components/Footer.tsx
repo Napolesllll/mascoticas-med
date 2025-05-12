@@ -95,11 +95,11 @@ export default function Footer({ currentSection, onNavigate }: FooterProps) {
               aria-label="Ir al inicio"
               className="mx-auto"
             >
-              <Image src="/logo.png" alt="Logo Mascoticas" width={150} height={50} />
+              <Image src="/LOGO.png" alt="Logo Mascoticas" width={150} height={50} />
             </button>
           ) : (
             <Link href="/">
-              <Image src="/logo.png" alt="Logo Mascoticas" width={150} height={50} />
+              <Image src="/LOGO.png" alt="Logo Mascoticas" width={150} height={50} />
             </Link>
           )}
         </motion.div>

@@ -126,7 +126,7 @@ const Contactanos = () => {
             <div className="pt-6">
               <h3 className="text-xl font-bold mb-4">Síguenos</h3>
               <div className="flex space-x-4">
-                {['facebook', 'instagram', 'tiktok'].map((social) => (
+                {[ 'tiktok'].map((social) => (
                   <motion.a
                     key={social}
                     href="#"

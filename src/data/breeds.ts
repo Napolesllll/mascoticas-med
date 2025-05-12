@@ -370,7 +370,7 @@ export const largeBreeds: Breed[] = [
   },
   {
     name: "Pastor alemán pelo largo",
-    description: "El Pastor Alemán es una raza de perro con un temperamento valiente, obediente e inteligente. Son extremadamente inteligentes y fáciles de entrenar, lo que los hace ideales para una variedad de roles, desde compañía hasta trabajos especializados. Son leales, afectuosos con la familia y alerta a la presencia de desconocidos.",
+    description: "El Pastor Alemán es una raza de perro con un temperamento valiente, obediente e inteligente. ",
     image: "/razas-grandes/4ee06a1b-4d44-4f16-bb09-6a2b70876bce.jpg",
     desde: "a partir de",
     precio: {
