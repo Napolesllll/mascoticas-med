@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, lazy, Suspense } from "react";
-import Navbar, { Section } from "@/components/Nav";
+import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const HomeHero = lazy(() => import("@/components/HomeHero"));
@@ -12,7 +12,8 @@ const Contactanos = lazy(() => import("@/components/Contactanos"));
 const ClientesFelices = lazy(() => import("@/components/ClientesFelices"));
 
 export default function Home() {
-  const [currentSection, setCurrentSection] = useState<Section>("inicio");
+  // Usa typeof Section si Section es un valor
+  const [currentSection, setCurrentSection] = useState<"inicio" | "sobre" | "contacto" | "clientes">("inicio");
 
   const renderSection = () => {
     switch (currentSection) {

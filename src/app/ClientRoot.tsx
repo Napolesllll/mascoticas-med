@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Nav, { Section } from "@/components/Nav";
-import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import DogAssistant from "@/components/DogAssistant";
 import FloatingThoughts from "@/components/FloatingThoughts";
 import WhatsappButton from "@/components/WhatsappButton";
+import { Section } from "@/components/Footer";
 
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
   // Estado para la sección actual
@@ -20,7 +20,11 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Barra de navegación */}
-      <Nav currentSection={currentSection} onNavigate={handleNavigate} />
+      <Nav
+        currentSection={currentSection}
+        onNavigate={handleNavigate}
+        isModalOpen={false} // Pasar un valor fijo si no se utiliza
+      />
 
       {/* Contenido principal */}
       <main className="flex-grow">{children}</main>

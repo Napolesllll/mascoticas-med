@@ -1,5 +1,4 @@
-// filepath: c:\Users\Usuario_02\Desktop\Proyectos importantes\mi-asistente-canino\src\app\layout.tsx
-import type { Metadata } from "next";
+import type { Metadata } from "next"; // Importa correctamente el tipo Metadata
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientRoot from "./ClientRoot"; // Asegúrate de que este componente sea un cliente
@@ -24,12 +23,12 @@ export default function RootLayout({
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        /> 
+          crossOrigin="anonymous"
+        />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className + " flex flex-col min-h-screen"}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         {/* Asegúrate de que ClientRoot sea un componente cliente */}
         <ClientRoot>{children}</ClientRoot>
       </body>

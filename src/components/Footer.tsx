@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Github, Instagram, Twitter, Facebook, PawPrint as PawIcon } from "lucide-react";
+import { PawPrint as PawIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,15 +31,10 @@ const sectionHref: Record<Section, string> = {
   clientes: "/clientes-felices",
 };
 
-export default function Footer({ currentSection, onNavigate }: FooterProps) {
-  const vividColors = [
-    "#ff6b81",
-    "#ff9f43",
-    "#48dbfb",
-    "#1dd1a1",
-    "#f368e0",
-  ];
+// Colores vivos para las huellas
+const vividColors = ["#ff6b81", "#ff9f43", "#48dbfb", "#1dd1a1", "#f368e0"];
 
+export default function Footer({ currentSection, onNavigate }: FooterProps) {
   const [pawprints, setPawprints] = useState<Paw[]>([]);
 
   useEffect(() => {
@@ -152,7 +147,6 @@ export default function Footer({ currentSection, onNavigate }: FooterProps) {
             <div className="flex justify-center gap-6 text-2xl text-zinc-400">
               {[
                 { Icon: FaTiktok, url: "https://tiktok.com" },
-                { Icon: Facebook, url: "https://facebook.com" },
               ].map((link, idx) => (
                 <motion.a
                   key={idx}

@@ -17,7 +17,7 @@ export default function DogAssistant() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [animationData, setAnimationData] = useState<any>(null);
+  const [animationData, setAnimationData] = useState<object | null>(null); // Cambiado de `unknown` a `object | null`
   const [breedRequested, setBreedRequested] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -70,7 +70,7 @@ export default function DogAssistant() {
       case '3':
         return `🦮 **Dieta para raza grande**\n\n🍽️ **Comidas al día**: 2 tomas de 200-300g de pienso de alta gama.\n🥕 **Snacks**: Suplementos recomendados por el veterinario.\n\n🍎 **Alimentos humanos seguros**:\n- Calabaza cocida 🎃\n- Pechuga de pavo sin piel 🍖\n- Batata al horno en cubos 🍠\n\n⚠️ **Cómo ofrecerlos**: Introduce gradualmente y vigila signos digestivos.\n\n🩺 Ajusta siempre con tu veterinario de confianza.`;
       default:
-        return 'Por favor ingresa 1️⃣, 2️⃣ o 3️⃣ para seleccionar el tamaño de raza.';
+        return 'Por favor ingresa 1️⃣,  2️⃣ o 3️⃣ para seleccionar el tamaño de raza.';
     }
   };
 
@@ -106,11 +106,6 @@ export default function DogAssistant() {
         content: typeof reply === 'string' ? reply : 'Max no entendió bien. 🐶'
       };
       setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      setMessages(prev => [...prev, {
-        role: 'assistant',
-        content: '¡Ups! Algo salió mal. ¿Intentas de nuevo? 🐾'
-      }]);
     } finally {
       setIsTyping(false);
     }
@@ -128,7 +123,7 @@ export default function DogAssistant() {
           aria-label="Abrir chat con Max"
         >
           <div className="w-16 h-16">
-            {animationData && <Lottie animationData={animationData} loop autoplay />}
+            {animationData && <Lottie animationData={animationData as object} loop autoplay />}
           </div>
         </button>
       )}
@@ -138,7 +133,7 @@ export default function DogAssistant() {
           <div className="bg-amber-500 p-4 rounded-t-xl flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10">
-                {animationData && <Lottie animationData={animationData} loop autoplay />}
+                {animationData && <Lottie animationData={animationData as object} loop autoplay />}
               </div>
               <h2 className="text-white font-bold">Max - Asistente Canino</h2>
             </div>

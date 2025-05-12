@@ -40,7 +40,7 @@ const ClientesFelices = () => {
   }, [sliderImages.length]);
 
   return (
-    <section className="relative w-full bg-gradient-to-br  mt-20 from-zinc-900 via-black to-zinc-950 text-white py-16 md:py-20 px-4">
+    <section className="relative w-full bg-gradient-to-br mt-20 from-zinc-900 via-black to-zinc-950 text-white py-16 md:py-20 px-4">
       <div className="absolute inset-0 overflow-hidden opacity-10">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -51,7 +51,7 @@ const ClientesFelices = () => {
               left: `${Math.random() * 100}%`,
               rotate: `${Math.random() * 360}deg`
             }}
-            animate={{ 
+            animate={{
               scale: [1, 1.2, 1],
               opacity: [0.5, 1, 0.5]
             }}
@@ -86,10 +86,12 @@ const ClientesFelices = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-8 mx-4 md:mx-0 overflow-hidden"
         >
-          <div className="relative h-[400px] transition-transform duration-700 ease-in-out"
-               style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+          <div
+            className="relative h-[400px] transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
             {sliderImages.map((item, index) => (
-              <div 
+              <div
                 key={item}
                 className="w-full absolute top-0 h-full flex items-center justify-center"
                 style={{ left: `${index * 100}%` }}
@@ -133,7 +135,7 @@ const ClientesFelices = () => {
                   <p className="text-red-400 text-sm">{testimonio.mascota}</p>
                 </div>
               </div>
-              <p className="text-zinc-300 italic">"{testimonio.comentario}"</p>
+              <p className="text-zinc-300 italic">&quot;{testimonio.comentario}&quot;</p>
               <div className="flex mt-4 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
                   <span key={i}>★</span>
@@ -142,8 +144,6 @@ const ClientesFelices = () => {
             </motion.div>
           ))}
         </div>
-
-       
       </div>
     </section>
   );
