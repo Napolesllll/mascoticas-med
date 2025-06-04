@@ -69,6 +69,18 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250408-WA0060.jpg",
       "/razas paqueñas/IMG-20250422-WA0105.jpg",
       "/razas paqueñas/IMG-20250422-WA0115.jpg",
+      "/razas paqueñas/118d8297-6bef-4416-8ab2-c3645f927190.jpg",
+      "/razas paqueñas/acc07ced-366f-4f3b-99a1-3be90de9af99.jpg",
+      "/razas paqueñas/9a09270f-b7bd-4e24-9d7a-dba09bc8a02d.jpg",
+      "/razas paqueñas/5a105487-3b3a-418e-b01d-7bf6f3f83983.jpg",
+      "/razas paqueñas/b6ed5163-3672-442e-80ed-3496fb72640b.jpg",
+      "/razas paqueñas/529deb86-16e6-4e85-80af-e5780e2e8292.jpg",
+      "/razas paqueñas/8b747a35-3224-4843-bbea-dfde5112a954.jpg",
+      "/razas paqueñas/2fa419f9-6cc4-44e3-a7eb-6b186b248a77.jpg",
+      "/razas paqueñas/0a3bdb9d-7041-4977-b660-b84aeb14a74e.jpg",
+      "/razas paqueñas/00b1d8b6-881b-41b1-bde7-534dc29c8bdf.jpg",
+      "/razas paqueñas/06adc90d-2000-4758-a52c-a8193296cfd0.jpg",
+      "/razas paqueñas/c6fd370f-791d-4f49-9805-cda55070039b.jpg",
     ]
   },
   {
