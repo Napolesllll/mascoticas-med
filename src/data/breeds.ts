@@ -53,7 +53,21 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250422-WA0045.jpg",
       "/razas paqueñas/IMG-20250422-WA0039.jpg",
       "/razas paqueñas/IMG-20250422-WA0047.jpg",
+    ],
+  },
+    {
+    name: "Yorkshire terrier biewer ",
+    description: "El temperamento del perro Yorkshire Terrier es generalmente abierto, juguetón, divertido, curioso, inteligente y afectuoso...",
+    image: "/razas paqueñas/7d6526f0-6e98-4259-9e39-79761e93d405.jpg",
+    precio: {
+      macho: 2000000,
+      hembra: 2500000
+    },
+    images: [
+
       "/razas paqueñas/19f3478c-e99c-4f87-997c-2c6db69631ba.jpg",
+      "/razas paqueñas/00caceb2-14d3-4c18-b22c-932bf5f7a82f.jpg",
+      "/razas paqueñas/c8bbcd07-f28e-4250-94ec-7190a1cd7ff9.jpg",
     ],
   },
   {
