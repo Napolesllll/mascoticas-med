@@ -25,6 +25,24 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250422-WA0196.jpg",
       "/razas paqueñas/IMG-20250422-WA0205.jpg",
       "/razas paqueñas/IMG-20250422-WA0194.jpg",
+      "/razas paqueñas/479fc9f3-91ae-44e8-8026-e55c0346feaf.jpg",
+      "/razas paqueñas/a2b540e9-d0ce-477c-a804-c5d138876617.jpg",
+      "/razas paqueñas/af7addb3-9e4d-4aea-8f73-b541bc05e7a7.jpg",
+      "/razas paqueñas/cc7ad306-0dcd-45fb-8512-1f40b0e00827.jpg",
+      "/razas paqueñas/d9e31424-8a1d-4096-838a-74c4a9bc9900.jpg",
+      "/razas paqueñas/2955e2d6-43c2-4baa-b0ed-41d442276226.jpg",
+      "/razas paqueñas/9f010bca-c0a8-43d8-899d-c745ba056271.jpg",
+      "/razas paqueñas/8badde02-08d3-4a06-a9a2-038df03f1753.jpg",
+      "/razas paqueñas/7db32094-5c5f-4a26-a5b9-223b3d56d44d.jpg",
+      "/razas paqueñas/082871ae-ca3b-4edd-947d-5d4fd91a3163.jpg",
+      "/razas paqueñas/e9505c67-2821-4fec-9558-81cce1aaf74b.jpg",
+      "/razas paqueñas/e7f2ef90-a7a1-4fdf-87a7-33df31242b58.jpg",
+      "/razas paqueñas/9c488fc7-5adf-4e9d-85d0-6083293ab46f.jpg",
+      "/razas paqueñas/161c96c0-6421-4974-92d3-fd44a34b5694.jpg",
+      "/razas paqueñas/bcef194e-3add-4513-9fc2-38e3ab413401.jpg",
+      "/razas paqueñas/117c6ecf-d4e7-4c30-a6b5-ed2a10785daf.jpg",
+      "/razas paqueñas/6948f2d9-f1b6-420b-8e0b-10f14120c330.jpg",
+      
       
     ]
   },
@@ -60,8 +78,8 @@ export const smallBreeds: Breed[] = [
     description: "El temperamento del perro Yorkshire Terrier es generalmente abierto, juguetón, divertido, curioso, inteligente y afectuoso...",
     image: "/razas paqueñas/7d6526f0-6e98-4259-9e39-79761e93d405.jpg",
     precio: {
-      macho: 2000000,
-      hembra: 2500000
+      macho: 2500000,
+      hembra: 3000000
     },
     images: [
 
@@ -157,6 +175,14 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250423-WA0011.jpg",
       "/razas paqueñas/IMG-20250423-WA0001.jpg",
       "/razas paqueñas/IMG-20250423-WA0195.jpg",
+            "/razas paqueñas/574946c4-d8e4-4c73-8998-c8d7d76d8f9c.jpg",
+      "/razas paqueñas/b05b8e0e-30ba-4eba-876c-fd55cd6e77f5.jpg",
+      "/razas paqueñas/a8762fbe-f654-407a-97cc-999aab7498ee.jpg",
+      "/razas paqueñas/4fc916aa-91f9-4f68-a7f9-15c417830ddb.jpg",
+      "/razas paqueñas/00fe8ae0-f8d0-4d4a-a441-2c40504bff67.jpg",
+      "/razas paqueñas/c7578b66-ac7e-4783-8858-016e66f24b23.jpg",
+      
+    
     ]
   },
 ];
@@ -245,6 +271,7 @@ export const mediumBreeds: Breed[] = [
       "/razas-medianas/IMG-20250423-WA0054.jpg",
       "/razas-medianas/IMG-20250423-WA0053.jpg",
       "/razas-medianas/IMG-20250423-WA0060.jpg",
+
     ]
   },
   {
