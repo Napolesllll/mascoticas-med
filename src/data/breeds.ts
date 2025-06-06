@@ -175,7 +175,7 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250423-WA0011.jpg",
       "/razas paqueñas/IMG-20250423-WA0001.jpg",
       "/razas paqueñas/IMG-20250423-WA0195.jpg",
-            "/razas paqueñas/574946c4-d8e4-4c73-8998-c8d7d76d8f9c.jpg",
+      "/razas paqueñas/574946c4-d8e4-4c73-8998-c8d7d76d8f9c.jpg",
       "/razas paqueñas/b05b8e0e-30ba-4eba-876c-fd55cd6e77f5.jpg",
       "/razas paqueñas/a8762fbe-f654-407a-97cc-999aab7498ee.jpg",
       "/razas paqueñas/4fc916aa-91f9-4f68-a7f9-15c417830ddb.jpg",
