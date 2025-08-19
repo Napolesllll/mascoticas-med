@@ -46,13 +46,13 @@ const Nav = ({
 
   return (
     <nav
-      className={`bg-black text-white fixed top-0 left-0 w-full shadow-md transition-all ${
+      className={`bg-black text-white fixed top-0 left-0 right-0 w-full shadow-md transition-all overflow-hidden ${
         isModalOpen ? "z-10" : "z-50"
-      }`} // Ajuste dinámico del z-index
+      }`} // Agregado right-0 y overflow-hidden
       aria-label="Navegación principal"
     >
       {/* Huellitas escritorio */}
-      <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
+      <div className="absolute inset-0 hidden md:block pointer-events-none z-0 overflow-hidden">
         {pawprints.map((paw) => (
           <motion.div
             key={paw.id}
@@ -73,20 +73,28 @@ const Nav = ({
       </div>
 
       {/* Contenido principal */}
-      <div className="relative z-10 container mx-auto px-4 py-4 flex items-center justify-between">
-        <div>
-          <button onClick={() => onNavigate("inicio")} aria-label="Ir al inicio">
+      <div className="relative z-10 max-w-full mx-auto px-4 py-4 flex items-center justify-between overflow-hidden">
+        <div className="flex-shrink-0">
+          <button
+            onClick={() => onNavigate("inicio")}
+            aria-label="Ir al inicio"
+          >
             <motion.div
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 1, repeat: Infinity, repeatType: "loop" }}
             >
-              <Image src="/LOGO.png" alt="Logo Mascoticas" width={150} height={50} />
+              <Image
+                src="/LOGO.png"
+                alt="Logo Mascoticas"
+                width={150}
+                height={50}
+              />
             </motion.div>
           </button>
         </div>
 
         {/* Menú de escritorio */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex space-x-6 flex-shrink-0">
           {[
             { id: "inicio", label: "Inicio" },
             { id: "sobre", label: "Sobre Nosotros" },
@@ -96,7 +104,7 @@ const Nav = ({
             <li key={item.id}>
               <button
                 onClick={() => onNavigate(item.id as Section)}
-                className={`hover:bg-red-600 px-4 py-2 rounded-md transition-colors ${
+                className={`hover:bg-red-600 px-4 py-2 rounded-md transition-colors whitespace-nowrap ${
                   currentSection === item.id ? "bg-red-600" : ""
                 }`}
               >
@@ -107,11 +115,11 @@ const Nav = ({
         </ul>
 
         {/* Botón hamburguesa - móvil */}
-        <div className="md:hidden">
+        <div className="md:hidden flex-shrink-0">
           <button
             onClick={toggleMenu}
             aria-label="Abrir menú móvil"
-            className="text-white"
+            className="text-white p-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +128,12 @@ const Nav = ({
               stroke="currentColor"
               className="h-6 w-6"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -147,21 +160,21 @@ const Nav = ({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ type: "spring", stiffness: 50 }}
-              className="fixed inset-0 flex items-center justify-center z-50"
+              className="fixed inset-0 flex items-center justify-center z-50 px-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative w-72 bg-black text-white p-6 rounded-xl shadow-lg">
+              <div className="relative w-full max-w-sm bg-black text-white p-6 rounded-xl shadow-lg overflow-hidden">
                 {/* Botón cerrar */}
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="absolute top-4 right-4 text-white text-2xl"
+                  className="absolute top-4 right-4 text-white text-2xl z-20"
                   aria-label="Cerrar menú"
                 >
                   ✕
                 </button>
 
                 {/* Huellitas */}
-                <div className="absolute inset-0 pointer-events-none z-0">
+                <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
                   {pawprintsMobile.map((paw) => (
                     <motion.div
                       key={`mobile-${paw.id}`}
@@ -182,14 +195,14 @@ const Nav = ({
                 </div>
 
                 {/* Links */}
-                <ul className="relative z-10 flex flex-col items-center gap-6 mt-4">
+                <ul className="relative z-10 flex flex-col items-center gap-6 mt-4 w-full">
                   {[
                     { id: "inicio", label: "Inicio" },
                     { id: "sobre", label: "Sobre Nosotros" },
                     { id: "contacto", label: "Contáctanos" },
                     { id: "clientes", label: "Clientes Felices" },
                   ].map((item) => (
-                    <li key={item.id}>
+                    <li key={item.id} className="w-full">
                       <button
                         onClick={() => {
                           onNavigate(item.id as Section);

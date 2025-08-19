@@ -39,7 +39,7 @@ export const useSEOTracking = () => {
 
   const trackInteraction = (
     type: string,
-    details: Record<string, any> = {}
+    details: Record<string, string | number | boolean> = {}
   ) => {
     trackEvent(`user_interaction_${type}`, {
       event_category: "user_interaction",

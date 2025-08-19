@@ -42,8 +42,8 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/bcef194e-3add-4513-9fc2-38e3ab413401.jpg",
       "/razas paqueñas/117c6ecf-d4e7-4c30-a6b5-ed2a10785daf.jpg",
       "/razas paqueñas/6948f2d9-f1b6-420b-8e0b-10f14120c330.jpg",
-      
-      
+
+
     ]
   },
   {
@@ -73,7 +73,7 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250422-WA0047.jpg",
     ],
   },
-    {
+  {
     name: "Yorkshire terrier biewer ",
     description: "El temperamento del perro Yorkshire Terrier es generalmente abierto, juguetón, divertido, curioso, inteligente y afectuoso...",
     image: "/razas paqueñas/7d6526f0-6e98-4259-9e39-79761e93d405.jpg",
@@ -144,7 +144,7 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/IMG-20250422-WA0024.jpg",
       "/razas paqueñas/IMG-20250422-WA0034.jpg",
       "/razas paqueñas/IMG-20250422-WA0010.jpg",
-      
+
     ]
   },
   {
@@ -259,7 +259,7 @@ export const mediumBreeds: Breed[] = [
     name: "Bulldog Ingles Tradicional y Exotico",
     description: "El temperamento del bulldog inglés se caracteriza por ser dulce, paciente, confiable y excelente como perro de compañía. Aunque es curioso y travieso como cachorro, se convierte en un perro tranquilo de adulto.",
     image: "/razas-medianas/IMG-20250423-WA0059.jpg",
-    desde: "a partir de", 
+    desde: "a partir de",
     precio: {
       macho: 2000000,
       hembra: 2300000
@@ -275,7 +275,7 @@ export const mediumBreeds: Breed[] = [
   {
     name: "Pug",
     description: "El temperamento del pug o carlino es el típico de un perro de compañía. Es cariñoso, alegre y juguetón. Tiene una personalidad fuerte y le gusta llamar la atención, pero es de carácter estable.",
-    image: "/razas-medianas/IMG-20250423-WA0062.jpg", 
+    image: "/razas-medianas/IMG-20250423-WA0062.jpg",
     precio: {
       macho: 1300000,
       hembra: 1300000
@@ -290,7 +290,7 @@ export const mediumBreeds: Breed[] = [
     name: "Pomsky siberianos lobitos miniatura",
     description: "El temperamento del perro Pomsky es uno de los aspectos más atractivos de esta raza. Son juguetones, inteligentes, amigables y territoriales.",
     image: "/razas-medianas/IMG-20250423-WA0077.jpg",
-    desde: "a partir de", 
+    desde: "a partir de",
     precio: {
       macho: 2000000,
       hembra: 2300000

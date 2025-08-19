@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const HomeHero = () => {
+  const [isClient, setIsClient] = useState(false);
   const [pawprints, setPawprints] = useState<
     Array<{
       id: number;
@@ -26,8 +27,15 @@ const HomeHero = () => {
   const idCounter = useRef(0);
   const heartCounter = useRef(0);
 
-  // Efecto para las huellas de patas
+  // Detectar si estamos en el cliente
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Efecto para las huellas de patas - solo en cliente
+  useEffect(() => {
+    if (!isClient) return;
+
     const interval = setInterval(() => {
       idCounter.current += 1;
       const newPaw = {
@@ -46,10 +54,12 @@ const HomeHero = () => {
     }, 300);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isClient]);
 
-  // Efecto para los corazones flotantes
+  // Efecto para los corazones flotantes - solo en cliente
   useEffect(() => {
+    if (!isClient) return;
+
     const createHeart = () => {
       heartCounter.current += 1;
       return {
@@ -87,79 +97,95 @@ const HomeHero = () => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isClient]);
+
+  // Datos estáticos para las chispas (no cambian entre servidor/cliente)
+  const staticSparks = Array.from({ length: 50 }, (_, i) => ({
+    id: i,
+    left: (i * 13.7) % 100, // Distribución determinística
+    top: (i * 17.3) % 100,
+    width: (i % 4) + 1,
+    height: (i % 4) + 1,
+    duration: (i % 3) + 2,
+    delay: (i % 20) / 10,
+    xMovement: (i % 10) - 5,
+  }));
 
   return (
     <section
       className="relative w-full h-screen bg-gradient-to-b from-black via-gray-900 to-red-900 text-white overflow-hidden flex flex-col justify-center items-center px-4"
       aria-label="Bienvenida a Mascoticas"
     >
-      {/* Efecto de chispas rojas */}
+      {/* Efecto de chispas rojas - usar datos estáticos */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 50 }).map((_, i) => (
+        {staticSparks.map((spark) => (
           <motion.div
-            key={i}
+            key={spark.id}
             className="absolute rounded-full bg-red-500"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 4 + 1}px`,
-              height: `${Math.random() * 4 + 1}px`,
+              left: `${spark.left}%`,
+              top: `${spark.top}%`,
+              width: `${spark.width}px`,
+              height: `${spark.height}px`,
             }}
             animate={{
               y: [0, -10, 0],
-              x: [0, Math.random() * 10 - 5, 0],
+              x: [0, spark.xMovement, 0],
               opacity: [0.3, 0.8, 0.3],
             }}
             transition={{
-              duration: Math.random() * 3 + 2,
+              duration: spark.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: spark.delay,
             }}
           />
         ))}
       </div>
 
-      {/* Corazones flotantes */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {hearts.map((heart) => (
-          <motion.div
-            key={`heart-${heart.id}`}
-            className="absolute text-red-400"
-            style={{
-              left: `${heart.x}%`,
-              top: `${heart.y}%`,
-              fontSize: `${heart.size}px`,
-              opacity: heart.opacity,
-              filter: `blur(${heart.size / 30}px)`,
-              pointerEvents: "none",
-            }}
-          >
-            ❤
-          </motion.div>
-        ))}
-      </div>
+      {/* Corazones flotantes - solo renderizar en cliente */}
+      {isClient && (
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          {hearts.map((heart) => (
+            <motion.div
+              key={`heart-${heart.id}`}
+              className="absolute text-red-400"
+              style={{
+                left: `${heart.x}%`,
+                top: `${heart.y}%`,
+                fontSize: `${heart.size}px`,
+                opacity: heart.opacity,
+                filter: `blur(${heart.size / 30}px)`,
+                pointerEvents: "none",
+              }}
+            >
+              ❤
+            </motion.div>
+          ))}
+        </div>
+      )}
 
-      {/* Fondo con huellitas animadas */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {pawprints.map((paw) => (
-          <motion.div
-            key={paw.id}
-            className="absolute text-white/30"
-            style={{
-              left: `${paw.x}%`,
-              top: `${paw.y}%`,
-              fontSize: `${paw.size}px`,
-              pointerEvents: "none",
-            }}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: [0, 0.7, 0], y: [10, 0, -10] }}
-            transition={{ duration: 3, delay: paw.delay }}
-          >
-            🐾
-          </motion.div>
-        ))}
-      </div>
+      {/* Fondo con huellitas animadas - solo renderizar en cliente */}
+      {isClient && (
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {pawprints.map((paw) => (
+            <motion.div
+              key={paw.id}
+              className="absolute text-white/30"
+              style={{
+                left: `${paw.x}%`,
+                top: `${paw.y}%`,
+                fontSize: `${paw.size}px`,
+                pointerEvents: "none",
+              }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: [0, 0.7, 0], y: [10, 0, -10] }}
+              transition={{ duration: 3, delay: paw.delay }}
+            >
+              🐾
+            </motion.div>
+          ))}
+        </div>
+      )}
 
       {/* Contenido principal */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl">
