@@ -1,0 +1,9 @@
+{
+  "name": "Mascoticas Bucaramanga Medellín",
+  "short_name": "Mascoticas",
+  "description": "Venta de cachorros de raza pura en Medellín y Bucaramanga",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#dc2626"
+}

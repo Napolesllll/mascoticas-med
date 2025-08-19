@@ -7,7 +7,11 @@ import FloatingThoughts from "@/components/FloatingThoughts";
 import WhatsappButton from "@/components/WhatsappButton";
 import { Section } from "@/components/Footer";
 
-export default function ClientRoot({ children }: { children: React.ReactNode }) {
+export default function ClientRoot({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   // Estado para la sección actual
   const [currentSection, setCurrentSection] = useState<Section>("inicio");
 
