@@ -88,18 +88,32 @@ export default function Footer({ currentSection, onNavigate }: FooterProps) {
       </AnimatePresence>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="mb-6">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="mb-6"
+        >
           {onNavigate ? (
             <button
               onClick={() => onNavigate("inicio")}
               aria-label="Ir al inicio"
               className="mx-auto"
             >
-              <Image src="/LOGO.png" alt="Logo Mascoticas" width={150} height={50} />
+              <Image
+                src="/LOGO.png"
+                alt="Logo Mascoticas"
+                width={150}
+                height={50}
+              />
             </button>
           ) : (
             <Link href="/">
-              <Image src="/LOGO.png" alt="Logo Mascoticas" width={150} height={50} />
+              <Image
+                src="/LOGO.png"
+                alt="Logo Mascoticas"
+                width={150}
+                height={50}
+              />
             </Link>
           )}
         </motion.div>
@@ -146,7 +160,10 @@ export default function Footer({ currentSection, onNavigate }: FooterProps) {
             <h3 className="text-xl font-semibold mb-4">Síguenos</h3>
             <div className="flex justify-center gap-6 text-2xl text-zinc-400">
               {[
-                { Icon: FaTiktok, url: "https://tiktok.com" },
+                {
+                  Icon: FaTiktok,
+                  url: "https://www.tiktok.com/@mascoticasbucaramanga",
+                },
               ].map((link, idx) => (
                 <motion.a
                   key={idx}
@@ -165,7 +182,9 @@ export default function Footer({ currentSection, onNavigate }: FooterProps) {
 
           <div>
             <h3 className="text-xl font-semibold mb-4">Contacto</h3>
-            <p className="text-sm text-zinc-400 mb-2">Email: jeananderson2208@gmail.com</p>
+            <p className="text-sm text-zinc-400 mb-2">
+              Email: jeananderson2208@gmail.com
+            </p>
             <p className="text-sm text-zinc-400">Tel: +57 316 316 9143</p>
           </div>
         </div>
