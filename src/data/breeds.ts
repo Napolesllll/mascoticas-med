@@ -340,8 +340,8 @@ export const largeBreeds: Breed[] = [
     description: "El temperamento del Golden Retriever es fuerte, poderoso pero muy gentil y fácilmente entrenable1. Son perros muy inteligentes, dóciles, amigables, fieles, celosos y confiantes. Les encanta la gente y los niños, por lo que no son buenos perros guardianes",
     image: "/razas-grandes/7881fd25-0865-499b-aa07-e113c5808753.jpg",
     precio: {
-      macho: 1300000,
-      hembra: 1300000
+      macho: 1500000,
+      hembra: 1500000
     },
     images: [
       "/razas-grandes/798c658b-838d-4f97-896b-2ee462875563.jpg",
