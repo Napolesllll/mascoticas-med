@@ -216,7 +216,7 @@ const ClientesModal = ({
                     </p>
                   </div>
                   <p className="text-zinc-300 italic text-sm">
-                    "{testimonio.comentario}"
+                    &quot;{testimonio.comentario}&quot;
                   </p>
                   <div className="flex mt-3 text-yellow-400">
                     {[...Array(5)].map((_, i) => (
