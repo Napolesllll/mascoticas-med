@@ -191,8 +191,8 @@ export const mediumBreeds: Breed[] = [
     description: "Se describe como amigable, alegre y afectuoso. Son muy sociables y se llevan bien con personas de todas las edades, incluidas las familias con niños..",
     image: "/razas-medianas/IMG-20250423-WA0014.jpg",
     precio: {
-      macho: 1000000,
-      hembra: 1000000
+      macho: 1200000,
+      hembra: 1200000
     },
     images: [
       "/razas-medianas/IMG-20250423-WA0015.jpg",
