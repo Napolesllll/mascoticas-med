@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { PawPrint, X, Heart } from "lucide-react";
+import { PawPrint, X, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -57,15 +57,25 @@ const ClientesModal = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const sliderImages = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25, 26, 27, 28, 29, 30,
+    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
   ];
+
+  const nextSlide = () => {
+    setActiveIndex((prev) => (prev + 1) % sliderImages.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex(
+      (prev) => (prev - 1 + sliderImages.length) % sliderImages.length
+    );
+  };
 
   useEffect(() => {
     if (!isOpen) return;
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % sliderImages.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isOpen, sliderImages.length]);
@@ -123,31 +133,6 @@ const ClientesModal = ({
             <X size={20} />
           </button>
 
-          {/* Corazones flotantes de fondo */}
-          <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
-            {[...Array(15)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute text-red-500 text-2xl"
-                style={{
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  scale: [1, 1.3, 1],
-                  opacity: [0.3, 0.8, 0.3],
-                  rotate: [0, 15, -15, 0],
-                }}
-                transition={{
-                  duration: 4 + Math.random() * 6,
-                  repeat: Infinity,
-                }}
-              >
-                ❤️
-              </motion.div>
-            ))}
-          </div>
-
           <div className="p-8 text-white relative z-10">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -160,7 +145,23 @@ const ClientesModal = ({
             </div>
 
             {/* Slider de imágenes */}
-            <div className="mb-8 overflow-hidden rounded-xl">
+            <div className="mb-8 overflow-hidden rounded-xl relative">
+              {/* Flecha izquierda */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-200 backdrop-blur-sm"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* Flecha derecha */}
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-200 backdrop-blur-sm"
+              >
+                <ChevronRight size={24} />
+              </button>
+
               <div
                 className="relative h-[300px] md:h-[400px] transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
