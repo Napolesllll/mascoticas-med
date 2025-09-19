@@ -264,37 +264,52 @@ const BreedSections = () => {
           />
         </div>
 
-        {/* Botón de Clientes Satisfechos */}
+        {/* Card de Clientes Satisfechos */}
         <motion.div
           className="flex justify-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <motion.button
+          <motion.div
+            whileHover="hover"
+            variants={cardVariants}
+            className="rounded-2xl overflow-hidden shadow-lg bg-zinc-800 text-white cursor-pointer max-w-sm"
             onClick={() => setIsModalOpen(true)}
-            className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 flex items-center gap-3 group"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(239, 68, 68, 0.3)",
-            }}
-            whileTap={{ scale: 0.95 }}
           >
-            <Heart className="group-hover:animate-pulse" size={24} />
-            <span className="text-lg">Clientes Satisfechos</span>
-            <motion.div
-              animate={{
-                rotate: [0, 15, -15, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              🐕
-            </motion.div>
-          </motion.button>
+            <div className="relative h-72 w-full">
+              <Image
+                src="/clientes-felices/carousel1.jpg"
+                alt="Clientes Satisfechos"
+                fill
+                className="object-contain"
+              />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="text-white text-6xl"
+                >
+                  ❤️
+                </motion.div>
+              </div>
+            </div>
+            <div className="p-6 text-center">
+              <Heart className="mx-auto mb-2 text-red-500" size={32} />
+              <h3 className="text-2xl font-semibold mb-2">
+                Clientes Satisfechos
+              </h3>
+              <p className="text-sm text-zinc-300">
+                Descubre las experiencias de familias felices con sus mascotas.
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </section>
 
