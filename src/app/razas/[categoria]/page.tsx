@@ -32,24 +32,61 @@ const getBreedsByCategory = (category: string): Breed[] => {
 
 const vividColors = ["#ff6b81", "#ff9f43", "#48dbfb", "#1dd1a1", "#f368e0"];
 
-// Componente de huellitas optimizado con memo
-const FloatingPaws = React.memo(() => (
-  <div className="absolute inset-0 -z-10 pointer-events-none">
-    {[...Array(20)].map((_, i) => (
-      <PawPrint
-        key={i}
-        className="absolute w-6 h-6 animate-[floatUp_14s_ease-in-out_infinite]"
-        style={{
-          top: `${Math.random() * 100}%`,
-          left: `${Math.random() * 100}%`,
-          color: vividColors[Math.floor(Math.random() * vividColors.length)],
-          opacity: 0.2 + Math.random() * 0.3,
-          animationDelay: `${Math.random() * 10}s`,
-        }}
-      />
-    ))}
-  </div>
-));
+// Tipo para los datos de cada huellita
+interface PawData {
+  id: number;
+  top: number;
+  left: number;
+  color: string;
+  opacity: number;
+  animationDelay: number;
+}
+
+// Componente de huellitas optimizado con memo - VERSIÓN CORREGIDA
+const FloatingPaws = React.memo(() => {
+  const [pawsData, setPawsData] = useState<PawData[]>([]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Generar datos solo en el cliente para evitar hydration mismatch
+    const generatePawsData = () => {
+      return Array.from({ length: 20 }, (_, i) => ({
+        id: i,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        color: vividColors[Math.floor(Math.random() * vividColors.length)],
+        opacity: 0.2 + Math.random() * 0.3,
+        animationDelay: Math.random() * 10,
+      }));
+    };
+
+    setPawsData(generatePawsData());
+    setIsMounted(true);
+  }, []);
+
+  // No renderizar nada hasta que esté montado en el cliente
+  if (!isMounted) {
+    return <div className="absolute inset-0 -z-10 pointer-events-none" />;
+  }
+
+  return (
+    <div className="absolute inset-0 -z-10 pointer-events-none">
+      {pawsData.map((paw) => (
+        <PawPrint
+          key={paw.id}
+          className="absolute w-6 h-6 animate-[floatUp_14s_ease-in-out_infinite]"
+          style={{
+            top: `${paw.top}%`,
+            left: `${paw.left}%`,
+            color: paw.color,
+            opacity: paw.opacity,
+            animationDelay: `${paw.animationDelay}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+});
 
 FloatingPaws.displayName = "FloatingPaws";
 

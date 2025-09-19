@@ -12,6 +12,43 @@ export type Breed = {
 
 export const smallBreeds: Breed[] = [
   {
+    name: "Pomeranias mini cara de oso lineas importadas coreanos y rusos",
+    description: "Energicos,Curosos, Leales, Valientes, Alertas! ",
+    image: "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.39_5c7c894b.jpg",
+    desde: "a partir de",
+    precio: {
+      macho: 3000000,
+      hembra: 4000000
+    },
+    images: [
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.39_35225c42.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.42_b272ca2f.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.40_98e119fd.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.41_e01a8edc.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.41_5f758fa6.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.41_2380c2f2.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.41_27fe40ea.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.41_8b0ea796.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.40_332afe78.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 10.22.42_18ea6bfa.jpg",
+      "/razas paqueñas/IMG-20250408-WA0060.jpg",
+      "/razas paqueñas/IMG-20250422-WA0105.jpg",
+      "/razas paqueñas/IMG-20250422-WA0115.jpg",
+      "/razas paqueñas/118d8297-6bef-4416-8ab2-c3645f927190.jpg",
+      "/razas paqueñas/acc07ced-366f-4f3b-99a1-3be90de9af99.jpg",
+      "/razas paqueñas/9a09270f-b7bd-4e24-9d7a-dba09bc8a02d.jpg",
+      "/razas paqueñas/5a105487-3b3a-418e-b01d-7bf6f3f83983.jpg",
+      "/razas paqueñas/b6ed5163-3672-442e-80ed-3496fb72640b.jpg",
+      "/razas paqueñas/529deb86-16e6-4e85-80af-e5780e2e8292.jpg",
+      "/razas paqueñas/8b747a35-3224-4843-bbea-dfde5112a954.jpg",
+      "/razas paqueñas/2fa419f9-6cc4-44e3-a7eb-6b186b248a77.jpg",
+      "/razas paqueñas/0a3bdb9d-7041-4977-b660-b84aeb14a74e.jpg",
+      "/razas paqueñas/00b1d8b6-881b-41b1-bde7-534dc29c8bdf.jpg",
+      "/razas paqueñas/06adc90d-2000-4758-a52c-a8193296cfd0.jpg",
+      "/razas paqueñas/c6fd370f-791d-4f49-9805-cda55070039b.jpg",
+    ]
+  },
+  {
     name: "Bulldog Francés",
     description: "Compacto, cariñoso y de expresión divertida.",
     image: "/razas paqueñas/IMG-20250422-WA0204.jpg",
@@ -88,33 +125,7 @@ export const smallBreeds: Breed[] = [
       "/razas paqueñas/c8bbcd07-f28e-4250-94ec-7190a1cd7ff9.jpg",
     ],
   },
-  {
-    name: "Pomeranias mini cara de oso lineas importadas coreanos y rusos",
-    description: "Energicos,Curosos, Leales, Valientes, Alertas! ",
-    image: "/razas paqueñas/IMG-20250422-WA0151.jpg",
-    desde: "a partir de",
-    precio: {
-      macho: 3000000,
-      hembra: 4000000
-    },
-    images: [
-      "/razas paqueñas/IMG-20250408-WA0060.jpg",
-      "/razas paqueñas/IMG-20250422-WA0105.jpg",
-      "/razas paqueñas/IMG-20250422-WA0115.jpg",
-      "/razas paqueñas/118d8297-6bef-4416-8ab2-c3645f927190.jpg",
-      "/razas paqueñas/acc07ced-366f-4f3b-99a1-3be90de9af99.jpg",
-      "/razas paqueñas/9a09270f-b7bd-4e24-9d7a-dba09bc8a02d.jpg",
-      "/razas paqueñas/5a105487-3b3a-418e-b01d-7bf6f3f83983.jpg",
-      "/razas paqueñas/b6ed5163-3672-442e-80ed-3496fb72640b.jpg",
-      "/razas paqueñas/529deb86-16e6-4e85-80af-e5780e2e8292.jpg",
-      "/razas paqueñas/8b747a35-3224-4843-bbea-dfde5112a954.jpg",
-      "/razas paqueñas/2fa419f9-6cc4-44e3-a7eb-6b186b248a77.jpg",
-      "/razas paqueñas/0a3bdb9d-7041-4977-b660-b84aeb14a74e.jpg",
-      "/razas paqueñas/00b1d8b6-881b-41b1-bde7-534dc29c8bdf.jpg",
-      "/razas paqueñas/06adc90d-2000-4758-a52c-a8193296cfd0.jpg",
-      "/razas paqueñas/c6fd370f-791d-4f49-9805-cda55070039b.jpg",
-    ]
-  },
+
   {
     name: "Chitzu",
     description: "Afectuoso Tranquilo Sociable Docil Juguetón",
@@ -140,6 +151,19 @@ export const smallBreeds: Breed[] = [
     },
     images: [
       "/razas paqueñas/IMG-20250422-WA0006.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.29_d58dd00b.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.29_f83a5072.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.29_eebb5ac9.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.30_b8d9c69d.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.30_f6de9ec0.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.30_083468da.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.30_30ca277e.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.30_607af05e.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.31_7ab2cb4c.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.31_d7d15ed4.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.31_86974a86.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.31_de5f3cc9.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 11.34.31_de2a9c31.jpg",
       "/razas paqueñas/IMG-20250422-WA0023.jpg",
       "/razas paqueñas/IMG-20250422-WA0024.jpg",
       "/razas paqueñas/IMG-20250422-WA0034.jpg",
@@ -429,6 +453,11 @@ export const largeBreeds: Breed[] = [
       hembra: 2500000
     },
     images: [
+      "/razas-grandes/Imagen de WhatsApp 2025-09-19 a las 11.34.31_4eee8130.jpg",
+      "/razas-grandes/Imagen de WhatsApp 2025-09-19 a las 11.34.32_5273d960.jpg",
+      "/razas-grandes/Imagen de WhatsApp 2025-09-19 a las 11.34.32_187dddf4.jpg",
+      "/razas-grandes/Imagen de WhatsApp 2025-09-19 a las 11.34.32_45cd93d3.jpg",
+
       "/razas-grandes/9ed65810-cd44-4529-99df-e28902cd09a2.jpg",
       "/razas-grandes/281fc109-74a6-4731-a365-a3dd82de60af.jpg",
       "/razas-grandes/ff89b8dd-cdd3-48dd-8945-1c74690bb3a4.jpg",
