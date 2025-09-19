@@ -135,6 +135,14 @@ export const smallBreeds: Breed[] = [
       hembra: 1500000
     },
     images: [
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.51_b67e3d2a.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.55_6380a29e.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.56_c2de5790.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.56_89a5a36b.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.56_16fed881.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.57_3efcf89b.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.57_bb80cd61.jpg",
+      "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.58_d9cda6a5.jpg",
       "/razas paqueñas/IMG-20250422-WA0087.jpg",
       "/razas paqueñas/IMG-20250422-WA0081.jpg",
       "/razas paqueñas/IMG-20250422-WA0089.jpg",
