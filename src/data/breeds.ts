@@ -131,8 +131,8 @@ export const smallBreeds: Breed[] = [
     description: "Afectuoso Tranquilo Sociable Docil Juguetón",
     image: "/razas paqueñas/IMG-20250422-WA0086.jpg",
     precio: {
-      macho: 1300000,
-      hembra: 1500000
+      macho: 1500000,
+      hembra: 1700000
     },
     images: [
       "/razas paqueñas/Imagen de WhatsApp 2025-09-19 a las 17.19.51_b67e3d2a.jpg",
@@ -237,8 +237,8 @@ export const mediumBreeds: Breed[] = [
     description: "Es amigable, cariñoso y energético. Son perros ecuánimes, ni demasiado agresivos ni demasiado tímidos. Prefieren compañía y pueden ser destructivos y ladradores si se les deja solos. ",
     image: "/razas-medianas/IMG-20250423-WA0028.jpg",
     precio: {
-      macho: 1000000,
-      hembra: 1000000
+      macho: 1300000,
+      hembra: 0
     },
     images: [
       "/razas-medianas/IMG-20250423-WA0029.jpg",
