@@ -238,7 +238,7 @@ export const mediumBreeds: Breed[] = [
     image: "/razas-medianas/IMG-20250423-WA0028.jpg",
     precio: {
       macho: 1300000,
-      hembra: 0
+      hembra: 1300000
     },
     images: [
       "/razas-medianas/IMG-20250423-WA0029.jpg",
