@@ -54,8 +54,8 @@ export const smallBreeds: Breed[] = [
     image: "/razas paqueñas/IMG-20250422-WA0204.jpg",
     desde: "a partir de",
     precio: {
-      macho: 1200000,
-      hembra: 1300000
+      macho: 1500000,
+      hembra: 1500000
     },
     images: [
       "/razas paqueñas/IMG-20250422-WA0213.jpg",
@@ -111,7 +111,7 @@ export const smallBreeds: Breed[] = [
     ],
   },
   {
-    name: "Yorkshire terrier biewer ",
+    name: "Biewer ",
     description: "El temperamento del perro Yorkshire Terrier es generalmente abierto, juguetón, divertido, curioso, inteligente y afectuoso...",
     image: "/razas paqueñas/7d6526f0-6e98-4259-9e39-79761e93d405.jpg",
     precio: {
@@ -127,7 +127,7 @@ export const smallBreeds: Breed[] = [
   },
 
   {
-    name: "Chitzu",
+    name: "Shihtzu miniatura",
     description: "Afectuoso Tranquilo Sociable Docil Juguetón",
     image: "/razas paqueñas/IMG-20250422-WA0086.jpg",
     precio: {
@@ -154,8 +154,8 @@ export const smallBreeds: Breed[] = [
     image: "/razas paqueñas/IMG-20250422-WA0003.jpg",
     desde: "a partir de",
     precio: {
-      macho: 1500000,
-      hembra: 1500000
+      macho: 1600000,
+      hembra: 1600000
     },
     images: [
       "/razas paqueñas/IMG-20250422-WA0006.jpg",
@@ -199,8 +199,8 @@ export const smallBreeds: Breed[] = [
     image: "/razas paqueñas/IMG-20250423-WA0000.jpg",
     desde: "a partir de",
     precio: {
-      macho: 1500000,
-      hembra: 2000000
+      macho: 2000000,
+      hembra: 2500000
     },
     images: [
       "/razas paqueñas/IMG-20250423-WA0008.jpg",
@@ -264,8 +264,8 @@ export const mediumBreeds: Breed[] = [
     description: "El schnauzer es una raza canina con un temperamento fuerte y cariñoso. Son inteligentes, energéticos y protectores. Aunque ladran mucho, también son excelentes perros guardianes",
     image: "/razas-medianas/IMG-20250423-WA0041.jpg",
     precio: {
-      macho: 1300000,
-      hembra: 1300000
+      macho: 1500000,
+      hembra: 1500000
     },
     images: [
       "/razas-medianas/IMG-20250423-WA0039.jpg",
@@ -343,8 +343,8 @@ export const largeBreeds: Breed[] = [
     image: "/razas-grandes/f3889dbb-be6c-4db8-ad6e-a63f027b9a12.jpg",
     desde: "a partir de",
     precio: {
-      macho: 1300000,
-      hembra: 1300000
+      macho: 1500000,
+      hembra: 1500000
     },
     images: [
       "/razas-grandes/f3889dbb-be6c-4db8-ad6e-a63f027b9a12.jpg",
@@ -357,6 +357,7 @@ export const largeBreeds: Breed[] = [
     name: "Doberman",
     description: "Los Dóberman son perros fuertes y enérgicos que necesitan practicar mucho ejercicio. Si no lo practican, es probable que se vuelvan irritables o incluso agresivos. Una cuidadosa socialización y adiestramiento en obediencia desde muy jóvenes son esenciales.",
     image: "/razas-grandes/640a3bd5-2f3f-477c-850e-6a3cafc499df.jpg",
+    desde: "a partir de",
     precio: {
       macho: 1600000,
       hembra: 1600000
@@ -457,8 +458,8 @@ export const largeBreeds: Breed[] = [
     image: "/razas-grandes/4ee06a1b-4d44-4f16-bb09-6a2b70876bce.jpg",
     desde: "a partir de",
     precio: {
-      macho: 1300000,
-      hembra: 2500000
+      macho: 1500000,
+      hembra: 1500000
     },
     images: [
       "/razas-grandes/Imagen de WhatsApp 2025-09-19 a las 11.34.31_4eee8130.jpg",
