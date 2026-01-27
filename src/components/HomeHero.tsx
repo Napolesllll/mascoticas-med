@@ -93,7 +93,7 @@ const HomeHero = () => {
         }
 
         return movedHearts;
-      });
+  });
     }, 100);
 
     return () => clearInterval(interval);
@@ -198,7 +198,7 @@ const HomeHero = () => {
         >
           <span className="text-white">Bienvenido a </span>
           <span className="text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.7)]">
-            Mascoticas
+            Jean Pet
           </span>
         </motion.h1>
 
