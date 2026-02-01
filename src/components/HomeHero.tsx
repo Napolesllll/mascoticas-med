@@ -209,7 +209,7 @@ const HomeHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          Donde los <span className="text-red-300">mejores amigos</span> te
+          Donde losss <span className="text-red-300">mejores amigos</span> te
           esperan
         </motion.h2>
 
